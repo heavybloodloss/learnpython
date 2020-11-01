@@ -116,7 +116,7 @@ class LaserWeaponArmory(Scene):
 class TheBridge(Scene):
     
     def enter(self):
-        print "You burst ontp the Bridge with the neutron destruct bomb"
+        print "You burst onto the Bridge with the neutron destruct bomb"
         print "under your arm and surprise 5 Gothons who are trying to"
         print "take control of the ship. Each of them has an even uglier"
         print "clown costume than the last. They haven't pulled their"
