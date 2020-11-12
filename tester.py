@@ -70,32 +70,40 @@ def action():
 # changed the names of the rooms to strings vs variables       
 remaining_rooms = ['Red', 'Blue', 'Yellow', 'Green']
 
+for doors in remaining_rooms:
+    # i = 0
+    print "%r" % doors
+    index = remaining_rooms.index(doors)
+    print ("the index of X is: ", index)
+    print (", ".join(remaining_rooms[index]))
+    # i += 1
+
 # able to find the index of the color i'm looking for
 index = remaining_rooms.index('Red')
 print ("the index of Red is: ", index)
 
 # trying to make the index callable so i can find the color and get the right room
-for doors in remaining_rooms.index():
-    current_room = doors
-    print "Would you like to go to the %s Door?" % current_room.color
-    if action() == "yes":
-        print "You have unlocked the %s Room. " % current_room.color
-        print "Upon inspection, you notice a glowing %s on the floor, " % current_room.treasure
-        print "will you pick it up?"
-        if action() == "yes":
-            current_room.locked = False
-            print "You have picked up the %s." % current_room.treasure
-            Me.inventory.append(current_room.treasure)
-            current_room.treasure = "nothing"
-            print "There is %s on the floor." % current_room.treasure
-            print "You have the following keys on you..."
-            print (', '.join(Me.inventory))
-        else:
-        	print "You hallucinate and leave the room, wandering until you die."
-        	exit(1)
-    else:
-        print "You continue to wander in the darkness."
-        exit(1)
+# for doors in remaining_rooms.index():
+#     current_room = doors
+#     print "Would you like to go to the %s Door?" % current_room.color
+#     if action() == "yes":
+#         print "You have unlocked the %s Room. " % current_room.color
+#         print "Upon inspection, you notice a glowing %s on the floor, " % current_room.treasure
+#         print "will you pick it up?"
+#         if action() == "yes":
+#             current_room.locked = False
+#             print "You have picked up the %s." % current_room.treasure
+#             Me.inventory.append(current_room.treasure)
+#             current_room.treasure = "nothing"
+#             print "There is %s on the floor." % current_room.treasure
+#             print "You have the following keys on you..."
+#             print (', '.join(Me.inventory))
+#         else:
+#         	print "You hallucinate and leave the room, wandering until you die."
+#         	exit(1)
+#     else:
+#         print "You continue to wander in the darkness."
+#         exit(1)
 
 # 
 # lists all the colored rooms that you need keys from
