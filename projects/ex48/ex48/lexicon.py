@@ -1,5 +1,5 @@
-
-s = raw_input("> ")
+# remove comment for "s = raw_input("> ")" to use as a python LUI check
+# s = raw_input("> ")
 
 def convert_number(s):
     try:
@@ -35,5 +35,5 @@ def scan(s):
 
     return result
 
-
-scan(s)
+# remove comment for "scan(s)" to use as a python LUI check
+# scan(s)
